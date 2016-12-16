@@ -202,4 +202,6 @@
    
    Addendum : 
    
-   All the delphi part (*.pas, *.dpr) is completely under the above Apache license. However, all "art" part comes "as is" from the net, and/or various ressources. All of them (*.ico, *.png, *.dfm which include png and other) *could have* more restrictive licence and it is distributed only for compilation and functional reason. Please *do not use* the art stuffs in your derivated work.
+   Short note about Art (*.ico, *.png and related, and/or included into *.dfm)
+   
+   All the delphi part (*.pas, *.dpr, *.dfm) is completely under the above Apache license. However, all "art" part comes "as is" from the net, and/or various ressources. All of them (*.ico, *.png, and other picture) *could have* more restrictive licence and it is distributed only for compilation and functional reason. Please *do not use* the art stuffs in your derivated work.
