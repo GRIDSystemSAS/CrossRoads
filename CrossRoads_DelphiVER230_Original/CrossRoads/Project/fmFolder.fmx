@@ -1,0 +1,43 @@
+object frmFolder: TfrmFolder
+  Left = 0
+  Top = 0
+  Caption = 'frmFolder'
+  ClientHeight = 47
+  ClientWidth = 131
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object layBody: TLayout
+    Position.Point = '(8,8)'
+    Width = 100.000000000000000000
+    Height = 20.000000000000000000
+    object layVisible: TLayout
+      Align = alClient
+      Width = 100.000000000000000000
+      Height = 20.000000000000000000
+      object rectFolder: TRectangle
+        Align = alClient
+        Position.Point = '(4,0)'
+        Width = 96.000000000000000000
+        Height = 20.000000000000000000
+        Padding.Rect = '(4,0,0,0)'
+        Fill.Color = claWhite
+        Stroke.Color = claSilver
+        Sides = [sdLeft]
+        object txtFolder: TText
+          Align = alClient
+          Cursor = crHandPoint
+          Position.Point = '(4,0)'
+          Width = 92.000000000000000000
+          Height = 20.000000000000000000
+          Padding.Rect = '(4,0,0,0)'
+          OnClick = txtFolderClick
+          OnMouseEnter = txtFolderMouseEnter
+          OnMouseLeave = txtFolderMouseLeave
+          Fill.Color = claSilver
+          Font.Size = 12.000000000000000000
+          Text = 'Folder1'
+        end
+      end
+    end
+  end
+end

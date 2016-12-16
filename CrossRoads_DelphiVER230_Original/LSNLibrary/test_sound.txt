@@ -1,0 +1,30 @@
+var
+  AudioPlayer : AVAudioPlayer;
+   {Since sound is played asynchronously, can't release (or autorelease)
+    until after sound is done playing, so declare and release somewhere
+    outside PlaySound. Call AudioPlayer.release to release.}
+ 
+procedure PlaySound(sndFileUrl : NSURL);
+ 
+ 
+implementation
+ 
+procedure PlaySound(sndFileUrl : NSURL);
+var
+  err : NSError;
+begin
+  if Assigned(AudioPlayer) then
+    begin
+    if AudioPlayer.isPlaying then
+      Exit
+    else
+      AudioPlayer.release;
+    end;
+ 
+  AudioPlayer := 
+   AVAudioPlayer.alloc.initWithContentsOfURL_error(sndFileUrl, @err);
+  if Assigned(AudioPlayer) then
+    AudioPlayer.play
+  else
+    NSLog(err.localizedDescription);
+end;

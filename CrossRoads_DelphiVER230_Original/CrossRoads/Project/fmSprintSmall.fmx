@@ -1,0 +1,68 @@
+object frmSprintSmall: TfrmSprintSmall
+  Left = 0
+  Top = 0
+  Caption = 'frmSprintSmall'
+  ClientHeight = 132
+  ClientWidth = 100
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object layBody: TLayout
+    Align = alClient
+    Position.Point = '(5,5)'
+    Width = 90.000000000000000000
+    Height = 122.000000000000000000
+    Padding.Rect = '(5,5,5,5)'
+    object rectCalBody: TRectangle
+      Align = alClient
+      Width = 90.000000000000000000
+      Height = 122.000000000000000000
+      Fill.Color = claWhite
+      Stroke.Color = claGray
+      object rectHeader: TRectangle
+        Align = alTop
+        Width = 90.000000000000000000
+        Height = 80.000000000000000000
+        Fill.Color = xFF363535
+        object layDate: TLayout
+          Align = alClient
+          Width = 90.000000000000000000
+          Height = 80.000000000000000000
+          object txtYear: TText
+            Align = alTop
+            Width = 90.000000000000000000
+            Height = 24.000000000000000000
+            Fill.Color = claWhite
+            Font.Size = 20.000000000000000000
+            Font.Style = [fsBold]
+            Text = '2011'
+          end
+          object txtWeekNum: TText
+            Align = alClient
+            Position.Point = '(0,24)'
+            Width = 90.000000000000000000
+            Height = 52.000000000000000000
+            Padding.Rect = '(0,0,0,4)'
+            Fill.Color = claWhite
+            Font.Size = 42.000000000000000000
+            Font.Style = [fsBold]
+            Text = '44'
+          end
+        end
+      end
+      object layContent: TLayout
+        Align = alClient
+        Position.Point = '(0,80)'
+        Width = 90.000000000000000000
+        Height = 42.000000000000000000
+        ClipChildren = True
+        object txtPeriod: TText
+          Align = alTop
+          Width = 90.000000000000000000
+          Height = 20.000000000000000000
+          Font.Size = 10.000000000000000000
+          Text = '30.12-05.01'
+        end
+      end
+    end
+  end
+end

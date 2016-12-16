@@ -1,0 +1,169 @@
+object frmVelocity: TfrmVelocity
+  Left = 0
+  Top = 0
+  Caption = 'frmVelocity'
+  ClientHeight = 350
+  ClientWidth = 450
+  Visible = False
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  StyleLookup = 'backgroundstyle'
+  object layBody: TLayout
+    Align = alClient
+    Width = 450.000000000000000000
+    Height = 350.000000000000000000
+    object chtBurnDown: TChart
+      Align = alClient
+      Width = 450.000000000000000000
+      Height = 350.000000000000000000
+      AllowPanning = pmNone
+      BackWall.Color = claWhite
+      Legend.Alignment = laBottom
+      Legend.BevelWidth = 1
+      Legend.Frame.Color = xFF827F7F
+      Legend.Frame.Width = 0.200000002980232200
+      Legend.LegendStyle = lsSeries
+      Legend.Shadow.Visible = False
+      Legend.Title.Shadow.Visible = False
+      Legend.TopPos = 0
+      Title.Color = xFF7D7B7B
+      Title.CustomPosition = True
+      Title.Left = 190
+      Title.Text.Strings = (
+        'Chart by estimation ')
+      Title.Top = 8
+      Title.VertMargin = 0
+      Title.Visible = False
+      BottomAxis.Grid.Color = xFFD7D7D7
+      BottomAxis.Grid.Style = psDashDotDot
+      BottomAxis.Grid.Width = 0.500000000000000000
+      BottomAxis.MinorTickCount = 1
+      BottomAxis.Title.Visible = False
+      Chart3DPercent = 1
+      DepthAxis.Automatic = False
+      DepthAxis.AutomaticMaximum = False
+      DepthAxis.Maximum = 0.500000000000000000
+      LeftAxis.Grid.Color = xFFCAC8C8
+      LeftAxis.Grid.Style = psDashDotDot
+      LeftAxis.Grid.Width = 0.500000000000000000
+      LeftAxis.Title.Caption = 'Estimation (in hours)'
+      LeftAxis.Title.Font.Size = 12.000000000000000000
+      LeftAxis.Title.Visible = False
+      RightAxis.Automatic = False
+      RightAxis.AutomaticMinimum = False
+      TopAxis.Automatic = False
+      TopAxis.AutomaticMinimum = False
+      View3D = False
+      View3DWalls = False
+      Zoom.Allow = False
+      Zoom.Brush.Kind = bkNone
+      BevelOuter = bvNone
+      Color = claWhite
+      TabOrder = 0
+      ColorPaletteIndex = 1
+      object Series3: TAreaSeries
+        Marks.Arrow.Visible = True
+        Marks.Callout.Brush.Color = claBlack
+        Marks.Callout.Arrow.Visible = True
+        Marks.Visible = False
+        SeriesColor = xFFB5E0FF
+        Title = 'Unscheduled '
+        AreaLinesPen.Visible = False
+        Dark3D = False
+        DrawArea = True
+        LinePen.Color = xFF93A6FF
+        LinePen.Width = 0.100000001490116100
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.Visible = False
+        Transparency = 30
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Data = {
+          0019000000000000000050744000000000004872400000000000D06640000000
+          0000005E4000000000001068400000000000F064400000000000087140000000
+          000060784000000000003076400000000000B875400000000000407A40000000
+          0000807B40000000000068804000000000003081400000000000488240000000
+          00004481400000000000787E400000000000407F400000000000048040000000
+          0000F48040000000000068804000000000000079400000000000287E40000000
+          000068804000000000002C8040}
+      end
+      object Series4: TAreaSeries
+        Marks.Arrow.Visible = True
+        Marks.Callout.Brush.Color = claBlack
+        Marks.Callout.Arrow.Visible = True
+        Marks.Visible = False
+        SeriesColor = xFF5496FD
+        Title = 'Scheduled '
+        AreaLinesPen.Visible = False
+        DrawArea = True
+        LinePen.Color = xFF5C55FC
+        LinePen.Width = 0.100000001490116100
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.Visible = False
+        Transparency = 50
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Data = {
+          0019000000000000000091744000000000005E71400000000000067540333333
+          3333207740CDCCCCCCCC1E76409A99999999A572403433333333AB7640CECCCC
+          CCCCD5734001000000001C74406766666666BE734034333333338E7240010000
+          0000D371400100000000E970406866666666CC6D403533333333536A40CFCCCC
+          CCCC6E6D400200000000FE6F4034333333334570409A99999999307240000000
+          00007470409A99999999BB7140CDCCCCCCCC0172403333333333BA7040999999
+          99991A734099999999995C7040}
+      end
+      object Series1: TBarSeries
+        BarPen.Color = xFFAD27FE
+        BarPen.Width = 0.100000001490116100
+        Marks.Arrow.Visible = True
+        Marks.Callout.Brush.Color = claBlack
+        Marks.Callout.Arrow.Visible = True
+        Marks.Callout.Length = 8
+        Marks.Visible = False
+        SeriesColor = xFFF8BFFF
+        Title = 'Velocity '
+        BarStyle = bsArrow
+        BarWidthPercent = 30
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Bar'
+        YValues.Order = loNone
+        Data = {
+          0019000000000000000050744000000000004872400000000000D06640000000
+          0000005E4000000000001068400000000000F064400000000000087140000000
+          000060784000000000003076400000000000B875400000000000407A40000000
+          0000807B40000000000068804000000000003081400000000000488240000000
+          00004481400000000000787E400000000000407F400000000000048040000000
+          0000F48040000000000068804000000000000079400000000000287E40000000
+          000068804000000000002C8040}
+      end
+      object Series2: TLineSeries
+        Marks.Arrow.Visible = True
+        Marks.Callout.Brush.Color = claBlack
+        Marks.Callout.Arrow.Visible = True
+        Marks.Visible = False
+        SeriesColor = xFFD40257
+        ShowInLegend = False
+        Title = 'Average'
+        Dark3D = False
+        LinePen.Color = xFFDA0303
+        LinePen.Width = 0.500000000000000000
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.Visible = False
+        TreatNulls = tnSkip
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Transparency = 50
+      end
+    end
+  end
+end

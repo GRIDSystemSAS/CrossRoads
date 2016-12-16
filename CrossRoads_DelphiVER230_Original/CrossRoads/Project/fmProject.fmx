@@ -1,0 +1,83 @@
+object frmProject: TfrmProject
+  Left = 0
+  Top = 0
+  Caption = 'frmProject'
+  ClientHeight = 40
+  ClientWidth = 200
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object layBody: TLayout
+    Width = 200.000000000000000000
+    Height = 34.000000000000000000
+    Padding.Rect = '(0,4,0,0)'
+    object LayVisible: TLayout
+      Align = alClient
+      Width = 200.000000000000000000
+      Height = 34.000000000000000000
+      object layTitle: TLayout
+        Align = alTop
+        Position.Point = '(4,4)'
+        Width = 192.000000000000000000
+        Height = 18.000000000000000000
+        Padding.Rect = '(4,4,4,0)'
+        HitTest = True
+        Visible = False
+      end
+      object layDesc: TLayout
+        Align = alClient
+        Position.Point = '(4,0)'
+        Width = 192.000000000000000000
+        Height = 30.000000000000000000
+        Padding.Rect = '(4,0,4,4)'
+        object layDescLeft: TLayout
+          Align = alLeft
+          Position.Point = '(1,2)'
+          Width = 20.000000000000000000
+          Height = 28.000000000000000000
+          Padding.Rect = '(1,2,0,0)'
+          object rectColor: TRectangle
+            Align = alLeft
+            Position.Point = '(10,0)'
+            Width = 10.000000000000000000
+            Height = 28.000000000000000000
+            Padding.Rect = '(10,0,0,0)'
+            Stroke.Color = claGray
+          end
+        end
+        object layDescBody: TLayout
+          Align = alClient
+          Position.Point = '(25,0)'
+          Width = 167.000000000000000000
+          Height = 30.000000000000000000
+          Padding.Rect = '(4,0,0,0)'
+          object txtDescription: TText
+            Position.Point = '(0,14)'
+            Width = 167.000000000000000000
+            Height = 14.000000000000000000
+            Fill.Color = claDimgray
+            Font.Size = 10.000000000000000000
+            HorzTextAlign = taLeading
+            VertTextAlign = taLeading
+            Text = 'txtDescription'
+          end
+          object txtProjectName: TText
+            Align = alTop
+            Cursor = crHandPoint
+            Width = 167.000000000000000000
+            Height = 21.000000000000000000
+            OnClick = txtProjectNameClick
+            OnMouseEnter = txtProjectNameMouseEnter
+            OnMouseLeave = txtProjectNameMouseLeave
+            AutoSize = True
+            Fill.Color = claDimgray
+            Font.Size = 13.000000000000000000
+            Font.Style = [fsBold]
+            HorzTextAlign = taLeading
+            VertTextAlign = taLeading
+            Text = 'txtProjectName'
+          end
+        end
+      end
+    end
+  end
+end
