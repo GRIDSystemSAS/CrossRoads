@@ -11,4 +11,9 @@ Laurent Sengmany is the author of the whole app, included design and code.
 
 https://www.youtube.com/watch?v=sSyYdvQN-BI
 
-Warning/Note about licence : All the delphi part (*.pas, *.dpr) is under Apache license. However, all "art" part comes "as is" from the net, and/or various ressources. All of them (*.ico, *.png, *.dfm which include png and other) *could have* more restrictive licence and it is distributed only for compilation and functional reason. Please *do not use* the art stuffs "as is". 
+Original work is archived under *"CrossRoads_DelphiVER230_Original"* directoy. This one compiles under XE2, and it is the original project.
+You will find an *incomplete* port of CrossRoads under XE7 in the *"CrossRoads_DelphiVER280_Port"* directory. Due to the huge FMX evolution between XE2 (VER230) and XE7 (VER280) we had simply duplicate the project.
+Note that the VER280 port compile under last delphi version (VER310)
+The identify problem actualy is FMX component behaviour modification (such as ParentClipping) 
+
+Important Warning/Note about licence : All Arts stuffs in this project *is not* under apache licence. Read Licence file for more information.  
