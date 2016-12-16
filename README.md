@@ -5,9 +5,9 @@ CrossRoads is a task manager, inspired by Scrum and KanBan method, this applicat
 
 In it first version, it was mainly a proof of concept to build a cross platform application using Delphi's FMX. It use only Delphi XE2's technologies (FMX, animation, clientDataSet as persistance layer). The goal was to test newest Delphi technology (hey, back to 2012 !), and to test the crossplatform capabilities of the FMX framework.
 
-Even today (2016+), it will a good exemple a well designed app using purely with Delphi tools.
+Even today (2016+), it will a good exemple a well designed app using only Delphi tools.
 
-Laurent Sengmany is the author of the whole app, included design and code. 
+*Laurent Sengmany* is the author of the whole app, included design and code. 
 
 https://www.youtube.com/watch?v=sSyYdvQN-BI
 
