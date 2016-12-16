@@ -1,0 +1,37 @@
+object frmLogElement: TfrmLogElement
+  Left = 0
+  Top = 0
+  Caption = 'frmLogElement'
+  ClientHeight = 109
+  ClientWidth = 358
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object layBody: TLayout
+    Position.Point = '(8,8)'
+    Width = 250.000000000000000000
+    Height = 60.000000000000000000
+    object layVisible: TLayout
+      Align = alClient
+      Width = 250.000000000000000000
+      Height = 60.000000000000000000
+      object txtDate: TText
+        Align = alTop
+        Width = 250.000000000000000000
+        Height = 10.000000000000000000
+        Font.Style = [fsBold]
+        HorzTextAlign = taLeading
+        Text = '01.01.2011 18:00'
+      end
+      object txtDescription: TText
+        Align = alClient
+        Position.Point = '(0,10)'
+        Width = 250.000000000000000000
+        Height = 50.000000000000000000
+        HorzTextAlign = taLeading
+        VertTextAlign = taLeading
+        Text = 'description...'
+        WordWrap = False
+      end
+    end
+  end
+end

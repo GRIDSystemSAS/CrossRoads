@@ -1,0 +1,278 @@
+
+type
+TMyThread = class(TThread)
+private
+procedure Execute; override;
+end;
+
+type
+TPurchaseThread = class(TThread)
+private
+procedure Execute; override;
+end;
+
+{$IFDEF FPC}
+
+type
+TInAppPurchase = objcclass(NSObject) procedure requestProUpgradeProductData;
+message ‘requestProUpgradeProductData’;
+end;
+
+type
+TInAppPurchaseDelegate = objcclass(NSObject, SKRequestDelegateProtocol)
+procedure requestDidFinish(request: SKRequest);
+message ‘requestDidFinish:’;
+
+procedure request_didFailWithError(request: SKRequest; error: NSError);
+message ‘request:didFailWithError:’;
+procedure productsRequest_didReceiveResponse(request: SKProductsRequest;
+response: SKProductsResponse);
+message ‘productsRequest:didReceiveResponse:’;
+end;
+
+type
+TPaymentDelegate = objcclass(NSObject, SKPaymentTransactionObserverProtocol)
+procedure paymentQueue_updatedTransactions(queue: SKPaymentQueue;
+transactions: NSArray);
+message ‘paymentQueue:updatedTransactions:’;
+end;
+
+var
+InAppPurchase: TInAppPurchase;
+InAppPurchaseDelegate: TInAppPurchaseDelegate;
+PaymentDelegate: TPaymentDelegate;
+PaymentQueue: SKPaymentQueue;
+Product: SKProduct;
+Payment: SKPayment;
+productsRequest: SKProductsRequest;
+
+{$ENDIF}
+
+implementation
+
+//(…)
+
+{$R *.lfm}
+
+FUNCTION TfrmDevice.UpGradeApp(App: integer): integer;
+begin
+if (App in [1 .. QuantitadeDeLayouts]) then
+begin
+btnPurchase.Enabled := FALSE;
+{$IFDEF FPC}
+RequestEnded := FALSE;
+FetchDataOk := True;
+RequestIAPInfo(App); //@Anders: Request IAP data to AppStore
+repeat
+Application.ProcessMessages;
+until (RequestEnded);
+if FetchDataOk then
+begin
+//@Anders: Allow user to click buy button
+end
+else
+begin
+//@Anders: Do not allow user to click buy button
+frmDevice.MyShowMessage(’Could not fetch product data.’);
+end;
+{$ENDIF}
+end
+else
+AppIdentifier := ”;
+end;
+
+//@Anders: Buy item button MouseUp (I always use it on XE2/iOS instead of onClick)
+procedure TfrmDevice.btnPurchaseMouseUp(Sender: TObject; Button: TMouseButton;
+Shift: TShiftState; X, Y: Single);
+var
+MyPurchaseThread: TPurchaseThread;
+begin
+btnPurchase.Enabled := FALSE;
+(Sender AS TButton).StyleLookup := ‘btnUPStyle1';
+(Sender AS TButton).Repaint;
+MyPurchaseThread := TPurchaseThread.Create(True);
+MyPurchaseThread.FreeOnTerminate := True;
+MyPurchaseThread.Execute;
+btnPurchase.Enabled := FALSE;
+Application.ProcessMessages;
+end;
+
+procedure TPurchaseThread.Execute;
+begin
+{$IFDEF FPC}
+PaymentDelegate := TPaymentDelegate.Alloc.Init;
+Payment := SKPayment.Alloc;
+Payment := SKPayment.paymentWithProductIdentifier
+(NSSTR(PCHAR(AppIdentifier)));
+PaymentQueue := SKPaymentQueue.Alloc.Init;
+if PaymentQueue.CanMakePayments then
+begin
+PaymentQueue.addTransactionObserver(PaymentDelegate);
+PaymentQueue.addPayment(Payment);
+end
+else
+begin
+frmDevice.MyShowMessage(’Not possible to make purchases right now.’);
+end;
+{$ENDIF}
+end;
+
+procedure TMyThread.Execute; // Executed when product data is requested
+begin
+{$IFDEF FPC}
+Product := SKProduct.Alloc;
+InAppPurchaseDelegate := TInAppPurchaseDelegate.Alloc;
+InAppPurchase := TInAppPurchase.Alloc.Init;
+productsRequest.SetDelegate(InAppPurchaseDelegate);
+InAppPurchase.requestProUpgradeProductData;
+Application.ProcessMessages;
+{$ENDIF}
+end;
+
+{$IFDEF FPC}
+
+PROCEDURE TPaymentDelegate.paymentQueue_updatedTransactions
+(queue: SKPaymentQueue; transactions: NSArray);
+var
+transaction: SKPaymentTransaction;
+Nstr: NSString;
+error: NSError;
+begin
+transaction := SKPaymentTransaction.Alloc;
+if transactions.Count >= 1 then
+begin
+// for i := 0 to transactions.Count-1 do
+begin
+transaction := transactions.objectAtIndex(0);
+case transaction.transactionState of
+SKPaymentTransactionStatePurchased:
+begin
+PaymentQueue.finishTransaction(transaction);
+PaymentQueue.removeTransactionObserver(PaymentDelegate);
+frmDevice.MyShowMessage(’Purchase OK.’);
+//PURCHASE OK
+end;
+SKPaymentTransactionStateRestored:
+begin
+PaymentQueue.finishTransaction(transaction);
+PaymentQueue.removeTransactionObserver(PaymentDelegate);
+frmDevice.MyShowMessage(’Purchase OK.’);
+//PURCHASE OK // Never called?
+end;
+SKPaymentTransactionStateFailed:
+begin
+PaymentQueue.finishTransaction(transaction);
+error := NSError.Alloc;
+error := transaction.error;
+Nstr := error.LocalizedDescription;
+frmDevice.btnPurchase.Enabled := True;
+// if error.Code = SKErrorPaymentCancelled then
+begin
+PaymentQueue.removeTransactionObserver(PaymentDelegate);
+frmDevice.aniComprar.Visible := FALSE;
+frmDevice.aniComprar.Enabled := FALSE;
+end;
+if String(Nstr.UTF8String) ” then
+frmDevice.MyShowMessage(String(Nstr.UTF8String))
+else
+frmDevice.MyShowMessage(’An error occured.’);
+end;
+SKPaymentTransactionStatePurchasing:
+begin
+// frmDevice.MyShowMessage(’Transaction going on.’);
+end;
+else
+begin
+//
+end;
+end; // CASE
+end;
+end
+else
+begin
+frmDevice.MyShowMessage(’Empty transaction list.’);
+end;
+// Application.ProcessMessages;
+end;
+
+PROCEDURE TInAppPurchase.requestProUpgradeProductData;
+var
+productIdentifiers: NSSet;
+begin
+productIdentifiers := NSSet.SetWithObject(NSSTR(PCHAR(AppIdentifier)));//@Anders: AppIdentifier: your IAP identifier. Must be set up on iTC even for tests
+productsRequest := SKProductsRequest.Alloc.initWithProductIdentifiers
+(productIdentifiers);
+productsRequest.SetDelegate(InAppPurchaseDelegate);
+productsRequest.Start;
+end;
+
+procedure TInAppPurchaseDelegate.requestDidFinish(request: SKRequest);
+begin
+RequestEnded := True;!
+end;
+
+procedure TInAppPurchaseDelegate.request_didFailWithError(request: SKRequest;
+error: NSError);
+var
+Nstr: NSString;
+begin
+FetchDataOk := FALSE;
+Nstr := error.LocalizedDescription;
+with frmDevice do
+begin
+MyShowMessage(String(Nstr.UTF8String));
+end;
+end;
+
+procedure TInAppPurchaseDelegate.productsRequest_didReceiveResponse
+(request: SKProductsRequest; response: SKProductsResponse);
+var
+MyProducts, Invalids: NSArray;
+nstrTitle, nstrDescrption, nstrID, nstrValue: NSString;
+MyValue: NSDecimalNumber;
+begin
+MyProducts := NSArray.Alloc;
+MyProducts := response.products;
+if MyProducts.Count >= 1 then
+begin
+FetchDataOk := True;
+Product := MyProducts.objectAtIndex(0);
+nstrTitle := Product.LocalizedTitle;
+nstrDescrption := Product.LocalizedDescription;
+MyValue := Product.Price;
+nstrValue := MyValue.StringValue;
+nstrID := Product.productIdentifier;
+upgradeTitulo := String(nstrTitle.UTF8String);
+UpgradeDescricao := String(nstrDescrption.UTF8String);
+UpgradeMyValue := String(nstrValue.UTF8String);
+UpgradeID := String(nstrID.UTF8String);
+//@Anders: Fetched data ok. Do your thing…
+end
+else
+begin
+frmDevice.btnPurchase.Enabled := FALSE;
+FetchDataOk := FALSE;
+Invalids := NSArray.Alloc;
+Invalids := response.invalidProductIdentifiers;
+with frmDevice do
+begin
+MyShowMessage(’There are invalid products.’);
+end;
+end;
+end;
+{$ENDIF}
+
+procedure TfrmDevice.RequestIAPInfo(App: integer);
+var
+MyThread: TMyThread;
+begin
+TRY
+AppGlobal := App;//@Anders: I have many apps in a single container app…
+AppIdentifier := AppID[App];//@Anders: your IAP identifier on iTC
+MyThread := TMyThread.Create(True);
+MyThread.Execute;
+MyThread.FreeOnTerminate := True;
+EXCEPT
+//
+end;
+end;

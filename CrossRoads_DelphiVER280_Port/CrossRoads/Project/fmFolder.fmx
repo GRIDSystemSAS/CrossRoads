@@ -1,0 +1,46 @@
+object frmFolder: TfrmFolder
+  Left = 0
+  Top = 0
+  Caption = 'frmFolder'
+  ClientHeight = 47
+  ClientWidth = 131
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  object layBody: TLayout
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 100.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+    object layVisible: TLayout
+      Align = Client
+      Size.Width = 100.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      object rectFolder: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Padding.Left = 4.000000000000000000
+        Sides = [Left]
+        Size.Width = 100.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claSilver
+        object txtFolder: TText
+          Align = Client
+          Cursor = crHandPoint
+          Padding.Left = 4.000000000000000000
+          Size.Width = 96.000000000000000000
+          Size.Height = 20.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Folder1'
+          OnClick = txtFolderClick
+          OnMouseEnter = txtFolderMouseEnter
+          OnMouseLeave = txtFolderMouseLeave
+        end
+      end
+    end
+  end
+end

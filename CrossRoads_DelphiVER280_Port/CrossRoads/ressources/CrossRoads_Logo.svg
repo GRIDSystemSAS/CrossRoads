@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="CrossRoads_Logo.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3801">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3803" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3805" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3793">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3795" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3797" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3793"
+       id="linearGradient3799"
+       x1="454.5498"
+       y1="436.69958"
+       x2="634.67578"
+       y2="436.69958"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3801"
+       id="linearGradient3807"
+       x1="454.5498"
+       y1="436.69958"
+       x2="634.67578"
+       y2="436.69958"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       id="filter3809"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3811"
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0" />
+      <feComposite
+         id="feComposite3813"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10" />
+      <feComposite
+         id="feComposite3815"
+         in2="result3"
+         k2="1"
+         operator="in"
+         in="result3"
+         result="result4" />
+    </filter>
+    <filter
+       id="filter3843"
+       inkscape:menu-tooltip="Draws a black outline around"
+       inkscape:menu="ABCs"
+       inkscape:label="Black outline"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3845"
+         stdDeviation="2"
+         in="SourceAlpha"
+         result="result0" />
+      <feComposite
+         id="feComposite3847"
+         in2="result0"
+         result="result3"
+         operator="arithmetic"
+         in="SourceGraphic"
+         k2="1"
+         k3="10" />
+      <feComposite
+         id="feComposite3849"
+         in2="result3"
+         k2="1"
+         operator="in"
+         in="result3"
+         result="result4" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="598.8225"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="825"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <rect
+       style="opacity:0.98999999;fill:#cccccc;fill-opacity:1;stroke:none"
+       id="rect3022"
+       width="324"
+       height="41"
+       x="444"
+       y="418.36218"
+       inkscape:export-filename="\\vmware-host\Shared Folders\LaurentS sur mon Mac\Dropbox\SVN\CrossRoads\ressources\Logo_CrossRoads2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:'7th Service';-inkscape-font-specification:'7th Service';font-stretch:normal;font-variant:normal;text-anchor:start;text-align:start;writing-mode:lr"
+       x="108"
+       y="77.094482"
+       id="text2985"
+       sodipodi:linespacing="125%"
+       transform="translate(0,308.2677)"><tspan
+         sodipodi:role="line"
+         id="tspan2987"
+         x="108"
+         y="77.094482">CROSS</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2989"
+       y="434.36218"
+       x="105"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Good Times;-inkscape-font-specification:Good Times"
+       xml:space="preserve"><tspan
+         y="434.36218"
+         x="105"
+         id="tspan2991"
+         sodipodi:role="line">CROSS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:60px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Johnny Fever;-inkscape-font-specification:Johnny Fever"
+       x="109"
+       y="500.36218"
+       id="text2993"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2995"
+         x="109"
+         y="500.36218">CROSS</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text2997"
+       y="552.36218"
+       x="109"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans Poster Bold JL;-inkscape-font-specification:Sans Poster Bold JL"
+       xml:space="preserve"><tspan
+         y="552.36218"
+         x="109"
+         id="tspan2999"
+         sodipodi:role="line">CROSS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:SF Distant Galaxy Alternate;-inkscape-font-specification:SF Distant Galaxy Alternate"
+       x="124"
+       y="603.36218"
+       id="text3001"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3003"
+         x="124"
+         y="603.36218">CROSS</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3005"
+       y="649.36218"
+       x="109"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Viper Squadron Solid;-inkscape-font-specification:Viper Squadron Solid"
+       xml:space="preserve"><tspan
+         y="649.36218"
+         x="109"
+         id="tspan3007"
+         sodipodi:role="line">CROSS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Viper Squadron Solid;-inkscape-font-specification:Viper Squadron Solid"
+       x="110"
+       y="692.36218"
+       id="text3009"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3011"
+         x="110"
+         y="692.36218">CROSS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:SF Distant Galaxy Alternate;-inkscape-font-specification:SF Distant Galaxy Alternate"
+       x="431"
+       y="642.36218"
+       id="text3017"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="\\vmware-host\Shared Folders\LaurentS sur mon Mac\Dropbox\SVN\CrossRoads\ressources\Logo_CrossRoads.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3019"
+         x="431"
+         y="642.36218">ROADS</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3013"
+       y="615.36218"
+       x="415"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter3809);font-family:SF Distant Galaxy Alternate;-inkscape-font-specification:SF Distant Galaxy Alternate"
+       xml:space="preserve"
+       inkscape:export-filename="\\vmware-host\Shared Folders\LaurentS sur mon Mac\Dropbox\SVN\CrossRoads\ressources\Logo_CrossRoads.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="615.36218"
+         x="415"
+         id="tspan3015"
+         sodipodi:role="line"
+         style="fill:#ffffff;fill-opacity:1;stroke:none">CROSS</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3863"
+       y="451.36218"
+       x="604"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:SF Distant Galaxy Alternate;-inkscape-font-specification:SF Distant Galaxy Alternate"
+       xml:space="preserve"
+       inkscape:export-filename="\\vmware-host\Shared Folders\LaurentS sur mon Mac\Dropbox\SVN\CrossRoads\ressources\Logo_CrossRoads2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="451.36218"
+         x="604"
+         id="tspan3865"
+         sodipodi:role="line">ROADS</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3839"
+       y="452.36218"
+       x="458"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;filter:url(#filter3843);font-family:SF Distant Galaxy Alternate;-inkscape-font-specification:SF Distant Galaxy Alternate"
+       xml:space="preserve"
+       inkscape:export-filename="\\vmware-host\Shared Folders\LaurentS sur mon Mac\Dropbox\SVN\CrossRoads\ressources\Logo_CrossRoads2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="452.36218"
+         x="458"
+         id="tspan3841"
+         sodipodi:role="line">CROSS</tspan></text>
+    <rect
+       style="opacity:0.98999999;fill:#000000;fill-opacity:1;stroke:none"
+       id="rect3020"
+       width="145"
+       height="3"
+       x="221"
+       y="749.36218" />
+  </g>
+</svg>

@@ -1,0 +1,87 @@
+object frmProjectElem: TfrmProjectElem
+  Left = 0
+  Top = 0
+  Caption = 'frmProjectElem'
+  ClientHeight = 46
+  ClientWidth = 226
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  object layBody: TLayout
+    Padding.Top = 4.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+    object LayVisible: TLayout
+      Align = Client
+      Size.Width = 200.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      object layTitle: TLayout
+        Align = Top
+        HitTest = True
+        Padding.Left = 4.000000000000000000
+        Padding.Top = 4.000000000000000000
+        Padding.Right = 4.000000000000000000
+        Position.X = 4.000000000000000000
+        Position.Y = 4.000000000000000000
+        Size.Width = 192.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+      end
+      object layDesc: TLayout
+        Align = Client
+        Padding.Left = 4.000000000000000000
+        Padding.Right = 4.000000000000000000
+        Padding.Bottom = 4.000000000000000000
+        Size.Width = 200.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        object layDescLeft: TLayout
+          Align = Left
+          Padding.Left = 1.000000000000000000
+          Padding.Top = 2.000000000000000000
+          Position.X = 4.000000000000000000
+          Size.Width = 20.000000000000000000
+          Size.Height = 12.000000000000000000
+          Size.PlatformDefault = False
+          object rectColor: TRectangle
+            Align = Left
+            Padding.Left = 10.000000000000000000
+            Position.X = 1.000000000000000000
+            Position.Y = 2.000000000000000000
+            Size.Width = 10.000000000000000000
+            Size.Height = 10.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claGray
+          end
+        end
+        object layDescBody: TLayout
+          Align = Client
+          Padding.Left = 4.000000000000000000
+          Size.Width = 172.000000000000000000
+          Size.Height = 12.000000000000000000
+          Size.PlatformDefault = False
+          object txtProjectName: TText
+            Align = Top
+            AutoSize = True
+            Cursor = crHandPoint
+            Position.X = 4.000000000000000000
+            Size.Width = 90.000000000000000000
+            Size.Height = 16.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'txtProjectName'
+            TextSettings.WordWrap = False
+            TextSettings.HorzAlign = Leading
+            TextSettings.VertAlign = Leading
+            OnClick = txtProjectNameClick
+            OnMouseEnter = txtProjectNameMouseEnter
+            OnMouseLeave = txtProjectNameMouseLeave
+          end
+        end
+      end
+    end
+  end
+end

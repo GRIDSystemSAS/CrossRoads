@@ -1,0 +1,75 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+		<ProjectExtensions>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<ItemGroup Condition="'$(Platform)'=='Win64'"/>
+		<ItemGroup Condition="'$(Platform)'=='OSX32'">
+			<DeployFile Condition="'$(Config)'=='Debug'" Include="OSX32\Debug\CrossRoads.info.plist">
+				<RemoteDir>CrossRoads.app\Contents\</RemoteDir>
+				<RemoteName>Info.plist</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Release'" Include="OSX32\Release\CrossRoads.icns">
+				<RemoteDir>CrossRoads.app\Contents\Resources\</RemoteDir>
+				<RemoteName>CrossRoads.icns</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Release'" Include="OSX32\Release\CrossRoads.info.plist">
+				<RemoteDir>CrossRoads.app\Contents\</RemoteDir>
+				<RemoteName>Info.plist</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Debug'" Include="OSX32\Debug\CrossRoads">
+				<RemoteDir>CrossRoads.app\Contents\MacOS\</RemoteDir>
+				<RemoteName>CrossRoads</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+				<Required>True</Required>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Release'" Include="OSX32\Release\CrossRoads.rsm">
+				<RemoteDir>CrossRoads.app\Contents\MacOS\</RemoteDir>
+				<RemoteName>CrossRoads.rsm</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Release'" Include="OSX32\Release\CrossRoads">
+				<RemoteDir>CrossRoads.app\Contents\MacOS\</RemoteDir>
+				<RemoteName>CrossRoads</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+				<Required>True</Required>
+			</DeployFile>
+			<DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+				<RemoteDir>CrossRoads.app\Contents\MacOS\</RemoteDir>
+				<RemoteName>libcgunwind.1.0.dylib</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Debug'" Include="OSX32\Debug\CrossRoads.rsm">
+				<RemoteDir>CrossRoads.app\Contents\MacOS\</RemoteDir>
+				<RemoteName>CrossRoads.rsm</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+			<DeployFile Condition="'$(Config)'=='Debug'" Include="OSX32\Debug\CrossRoads.icns">
+				<RemoteDir>CrossRoads.app\Contents\Resources\</RemoteDir>
+				<RemoteName>CrossRoads.icns</RemoteName>
+				<Operation>1</Operation>
+				<LocalCommand/>
+				<RemoteCommand/>
+			</DeployFile>
+		</ItemGroup>
+		<ItemGroup Condition="'$(Platform)'=='Win32'"/>
+	</Project>
