@@ -17,7 +17,9 @@ https://www.youtube.com/watch?v=sSyYdvQN-BI
 - You will find an *incomplete* port of CrossRoads under XE7 in the *"CrossRoads_DelphiVER280_Port"* directory. Due to the huge FMX evolution between XE2 (VER230) and XE7 (VER280) we had simply duplicate the project.
 -  Note that the VER280 port compile under last delphi version (VER310)
 - Note : we do not have plan for a futur version, dev on CrossRoad are over. If you fix XE7 version, we'll be please to plublish it here.  
-# The CrossRoads project has been put in Open-Source (Apache Licence) on 2016/12/16 on a request for learning ressources. 
+
+The CrossRoads project has been put in Open-Source (Apache Licence) on 2016/12/16 on a request for learning ressources. 
+
 
 # Important Warning/Note about licence : 
 - All Arts stuffs in this project *is not* under apache licence. Read Licence file for more information.  
