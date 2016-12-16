@@ -199,3 +199,7 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+   
+   Addendum : 
+   
+   All the delphi part (*.pas, *.dpr) is completely under the above Apache license. However, all "art" part comes "as is" from the net, and/or various ressources. All of them (*.ico, *.png, *.dfm which include png and other) *could have* more restrictive licence and it is distributed only for compilation and functional reason. Please *do not use* the art stuffs in your derivated work.
