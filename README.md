@@ -10,3 +10,5 @@ Even today, it will a good exemple a well designed app using purely Delphi tools
 Laurent Sengmany is the author of the whole app, included design and code. 
 
 https://www.youtube.com/watch?v=sSyYdvQN-BI
+
+Warning/Note about licence : All the delphi part (*.pas, *.dpr) is under Apache license. However, all "art" part comes "as is" from the net, and/or various ressources. All of them (*.ico, *.png, *.dfm which include png and other) *could have* more restrictive licence and it is distributed only for compilation and functional reason. Please *do not use* the art stuffs "as is". 
