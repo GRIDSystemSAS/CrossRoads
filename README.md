@@ -9,6 +9,9 @@ Even today (2016+), it will a good exemple a well designed app using only Delphi
 
 *Laurent Sengmany* is the author of the whole app, included design and code. 
 
+![Alt text](/../master/CrossRoads_DelphiVER230_Original/CrossRoads/ressources/CROrigScreenShot.png?raw=true "Optional Title")
+
+# Video demo : 
 https://www.youtube.com/watch?v=sSyYdvQN-BI
 
 # Project Status : 
